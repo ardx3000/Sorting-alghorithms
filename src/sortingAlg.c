@@ -13,3 +13,26 @@ void bubbleSort(int *arr, int n)
         }
     }
 }
+
+void selectionSort(int *arr, int count)
+{
+    for (int i = 0; i < count - 1; i++)
+    {
+        int minIndex = 1;
+
+        for (int j = i + 1; j < count; j++)
+        {
+            if (arr[j] < arr[minIndex])
+            {
+                minIndex = j;
+            }
+        }
+
+        if (minIndex != i)
+        {
+            int temp = arr[i];
+            arr[i] = arr[minIndex];
+            arr[minIndex] = temp;
+        } 
+    }
+}
