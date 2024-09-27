@@ -1,11 +1,11 @@
-#ifndef SORTINGALGHORITHMS_H
-#define SORTINGALGHORITHMS_H
+#ifndef SORTFILE_H
+#define SORTFILE_H
 
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
+#include<sortingAlg.h>
 
-void bubbleSort(int *arr, int n);
 void sortFile(const char *filename, int sortType);
 
 #endif

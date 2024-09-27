@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "utils.h"
-#include "sortingAlghorithms.h"
+#include "sortFile.h"
 
 int main()
 {
