@@ -46,13 +46,37 @@ void sortFile(const char *filename, int sortType)
             printf("BubbleSort of 100000 took: %.6f seconds\n", time_taken);
             break;
             case 2:
-            start = clock();
-            selectionSort(arr, count);
-            end = clock();
-            time_taken = (double)(end - start) / CLOCKS_PER_SEC;
-            printf("SelectionSort of 100000 took: %.6f seconds\n", time_taken);
-            break;
-
+                start = clock();
+                selectionSort(arr, count);
+                end = clock();
+                time_taken = (double)(end - start) / CLOCKS_PER_SEC;
+                printf("SelectionSort of 100000 took: %.6f seconds\n", time_taken);
+                break;
+            case 3:
+                start = clock();
+                insertionSort(arr, count);
+                end = clock();
+                time_taken = (double)(end - start) / CLOCKS_PER_SEC;
+                printf("Insertion sort of 100000 took: %.6f seconds\n", time_taken);
+                break;
+            case 4:
+                start = clock();
+                mergeSort(arr, 0, count - 1);
+                end = clock();
+                time_taken = (double)(end - start) / CLOCKS_PER_SEC;
+                printf("Merge sort of 100000 took: %.6f seconds\n", time_taken);
+                break;
+            case 5:
+                start = clock();
+                quickSort(arr, 0, count -1);
+                end = clock();
+                time_taken = (double)(end - start) / CLOCKS_PER_SEC;
+                printf("QuickSort of %d elements took: %.6f seconds\n", count, time_taken);
+                break;
+            default:
+                printf("Invalid sort type!\n");
+                free(arr);
+                return;
     }
 
     // Open the file for writing (overwrite the file)
